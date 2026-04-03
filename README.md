@@ -21,7 +21,7 @@ erreurs/
 scripts/
   process_pdfs.py      # script principal
   install_skills.py    # installation optionnelle des compétences locales
-competences/
+skills/
   maintenance-pdf-markdown/
 AGENTS.md
 requirements.txt
@@ -90,7 +90,7 @@ sortie/
 
 ## Compétences locales
 
-Le dépôt inclut une compétence locale minimale dans `competences/maintenance-pdf-markdown/` pour guider les futures évolutions du projet.
+Le dépôt inclut une compétence locale minimale dans `skills/maintenance-pdf-markdown/` pour guider les futures évolutions du projet.
 
 Installation optionnelle :
 

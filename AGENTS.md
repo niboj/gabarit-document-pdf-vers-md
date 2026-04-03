@@ -18,7 +18,7 @@ Ce dépôt sert à convertir des PDF locaux en une structure Markdown exploitabl
 - `sortie/` contient un dossier par document extrait.
 - `erreurs/` contient les rapports d'échec.
 - `scripts/` contient les points d'entrée et utilitaires.
-- `competences/` contient les compétences locales liées au maintien du gabarit.
+- `skills/` contient les compétences locales liées au maintien du gabarit.
 
 ## Vérifications à faire après modification
 
