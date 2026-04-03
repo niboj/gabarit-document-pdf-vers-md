@@ -6,7 +6,7 @@ Ce dépôt sert à convertir des PDF locaux en une structure Markdown exploitabl
 
 ## Règles de travail
 
-- Conserver un flux simple : `input/drop` -> `scripts/process_pdfs.py` -> `output`.
+- Conserver un flux simple : `entree/depot` -> `scripts/process_pdfs.py` -> `sortie`.
 - Préserver des chemins et noms de fichiers stables pour faciliter l'automatisation.
 - Garder le code Python compatible avec un usage local simple, sans service externe obligatoire.
 - Documenter toute nouvelle option CLI dans `README.md`.
@@ -14,11 +14,11 @@ Ce dépôt sert à convertir des PDF locaux en une structure Markdown exploitabl
 
 ## Arborescence attendue
 
-- `input/drop/` contient les PDF source.
-- `output/` contient un dossier par document extrait.
-- `error/` contient les rapports d'échec.
+- `entree/depot/` contient les PDF source.
+- `sortie/` contient un dossier par document extrait.
+- `erreurs/` contient les rapports d'échec.
 - `scripts/` contient les points d'entrée et utilitaires.
-- `skills/` contient les skills locaux liés au maintien du gabarit.
+- `competences/` contient les compétences locales liées au maintien du gabarit.
 
 ## Vérifications à faire après modification
 

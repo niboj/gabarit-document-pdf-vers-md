@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install repository skills into the local Codex skills directory."""
+"""Installe les compétences du dépôt dans le répertoire local de Codex."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ def main() -> int:
         if destination.exists():
             shutil.rmtree(destination)
         shutil.copytree(source, destination)
-        print(f"Skill installé: {name} -> {destination}")
+        print(f"Compétence installée: {name} -> {destination}")
 
     return 0
 

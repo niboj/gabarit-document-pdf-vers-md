@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert local PDF files into a Markdown folder structure with images."""
+"""Convertit des PDF locaux en une structure Markdown avec images."""
 
 from __future__ import annotations
 
@@ -15,10 +15,10 @@ if TYPE_CHECKING:
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INPUT_DIR = ROOT / "input"
-DROP_DIR = INPUT_DIR / "drop"
-OUTPUT_DIR = ROOT / "output"
-ERROR_DIR = ROOT / "error"
+INPUT_DIR = ROOT / "entree"
+DROP_DIR = INPUT_DIR / "depot"
+OUTPUT_DIR = ROOT / "sortie"
+ERROR_DIR = ROOT / "erreurs"
 
 
 def require_fitz():
@@ -326,10 +326,10 @@ def process_pdf(pdf_path: Path, output_dir: Path, error_dir: Path, force: bool) 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Convertit des PDF locaux en structure Markdown.")
-    parser.add_argument("--input-dir", type=Path, default=INPUT_DIR)
-    parser.add_argument("--drop-dir", type=Path, default=DROP_DIR)
-    parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
-    parser.add_argument("--error-dir", type=Path, default=ERROR_DIR)
+    parser.add_argument("--entree-dir", "--input-dir", dest="input_dir", type=Path, default=INPUT_DIR)
+    parser.add_argument("--depot-dir", "--drop-dir", dest="drop_dir", type=Path, default=DROP_DIR)
+    parser.add_argument("--sortie-dir", "--output-dir", dest="output_dir", type=Path, default=OUTPUT_DIR)
+    parser.add_argument("--erreurs-dir", "--error-dir", dest="error_dir", type=Path, default=ERROR_DIR)
     parser.add_argument("--pdf", type=Path, help="Chemin d'un PDF unique à traiter.")
     parser.add_argument("--force", action="store_true", help="Remplace une extraction existante.")
     return parser.parse_args()

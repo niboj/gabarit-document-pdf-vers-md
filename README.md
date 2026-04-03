@@ -4,25 +4,25 @@ Projet gabarit pour convertir un document PDF local en une structure Markdown av
 
 ## Objectif
 
-Déposer un ou plusieurs fichiers PDF dans `input/drop/`, exécuter un script, puis récupérer une sortie structurée dans `output/`.
+Déposer un ou plusieurs fichiers PDF dans `entree/depot/`, exécuter un script, puis récupérer une sortie structurée dans `sortie/`.
 
 ## Structure
 
 ```text
-input/
-  drop/                # PDFs à convertir
-output/
+entree/
+  depot/               # PDF à convertir
+sortie/
   <document>/          # 1 dossier par PDF converti
     index.md           # table des matières du document
     01-*.md            # sections extraites depuis le sommaire PDF
     images/            # images extraites du PDF
-error/
+erreurs/
   <document>/          # rapports d'erreur
 scripts/
   process_pdfs.py      # script principal
-  install_skills.py    # installation optionnelle des skills locaux
-skills/
-  pdf-markdown-maintainer/
+  install_skills.py    # installation optionnelle des compétences locales
+competences/
+  maintenance-pdf-markdown/
 AGENTS.md
 requirements.txt
 skills.config.json
@@ -46,21 +46,21 @@ python -m pip install -r requirements.txt
 
 ## Utilisation
 
-1. Déposer un PDF dans `input/drop/`.
+1. Déposer un PDF dans `entree/depot/`.
 2. Lancer :
 
 ```bash
 python3 scripts/process_pdfs.py
 ```
 
-3. Récupérer le résultat dans `output/<document>/`.
+3. Récupérer le résultat dans `sortie/<document>/`.
 
 ## Options utiles
 
 ```bash
 python3 scripts/process_pdfs.py --force
-python3 scripts/process_pdfs.py --pdf "input/drop/mon-document.pdf"
-python3 scripts/process_pdfs.py --output-dir output
+python3 scripts/process_pdfs.py --pdf "entree/depot/mon-document.pdf"
+python3 scripts/process_pdfs.py --sortie-dir sortie
 ```
 
 ## Résultat généré
@@ -68,7 +68,7 @@ python3 scripts/process_pdfs.py --output-dir output
 Pour un PDF `Mon document.pdf`, le script crée typiquement :
 
 ```text
-output/
+sortie/
   mon_document/
     Mon document.pdf
     index.md
@@ -88,9 +88,9 @@ output/
 - Certains PDF scannés ou très complexes peuvent nécessiter un traitement OCR distinct.
 - Les images extraites correspondent aux objets graphiques détectés dans le PDF.
 
-## Skills locaux
+## Compétences locales
 
-Le dépôt inclut un skill local minimal dans `skills/pdf-markdown-maintainer/` pour guider les futures évolutions du projet.
+Le dépôt inclut une compétence locale minimale dans `competences/maintenance-pdf-markdown/` pour guider les futures évolutions du projet.
 
 Installation optionnelle :
 

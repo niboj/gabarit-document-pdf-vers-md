@@ -1,15 +1,15 @@
 ---
-name: pdf-markdown-maintainer
+name: maintenance-pdf-markdown
 description: Maintenir et faire évoluer ce gabarit de conversion PDF vers Markdown sans casser le flux local ni la structure de sortie.
 ---
 
-# PDF Markdown Maintainer
+# Maintenance PDF Markdown
 
 Utiliser ce skill quand une demande concerne l'évolution de ce dépôt, de ses scripts ou de sa documentation.
 
 ## Intentions
 
-- Préserver le flux `input/drop -> script -> output`.
+- Préserver le flux `entree/depot -> script -> sortie`.
 - Garder la sortie Markdown lisible et stable.
 - Limiter les dépendances et la complexité opérationnelle.
 
